@@ -46,7 +46,10 @@ def windows():
 def linux():
     clear()
     l = Linuxsys(server_jar_link, 'Linux/Ubuntu')
-    l.Downloader
+    l.Downloader()
+    l.run()
+    clear()
+    print('Go to EULA.txt and change eula=false to eula=true and run start.py')
 
 def macos():
     clear()
