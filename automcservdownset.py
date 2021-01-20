@@ -36,13 +36,32 @@ class MacOS:
         time.sleep(1)
         print('Running')
         os.system('java -Xmx1024M -Xms1024M -jar server.jar nogui ')
+class Windows:
+    def __init__(self, link, systype):
+        self.link = link
+        self.sys = systype
+    
+    def Downloader(self):
+        os.system('cmd /k curl ' + server_jar_link + ' ' + '--output server.jar')
 
+    def run(self):
+        print('To run a minecraft server, you must have Java installed')
+        print('Running')
+        time.sleep(1)
+        clear()
+        print('Running..')
+        time.sleep(1)
+        os.system('java -Xmx1024M -Xms1024M -jar server.jar nogui ')
 
 def clear():
     os.system('clear')    
-
 def windows():
-    pass
+    clear()
+    w = Windows(server_jar_link, 'Windows')
+    w.Downloader()
+    w.run()
+    clear()
+    print('Go to EULA.txt and change eula=false to eula=true and run start.py')
 def linux():
     clear()
     l = Linuxsys(server_jar_link, 'Linux/Ubuntu')
@@ -50,7 +69,6 @@ def linux():
     l.run()
     clear()
     print('Go to EULA.txt and change eula=false to eula=true and run start.py')
-
 def macos():
     clear()
     m = MacOS(server_jar_link, 'MacOS')
@@ -58,12 +76,12 @@ def macos():
 
 
 clear()
-print('1:  Windows')
-print('2:  MacOS')
-print('3:  Linux')
+print('1:  Windows ')
+print('2:  MacOS ')
+print('3:  Linux ')
 
 
-start = input('Enter your OS: [1, 2, 3]')
+start = input('Enter your OS: [1, 2, 3] ')
 
 
 if start == '1':
