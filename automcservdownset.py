@@ -57,7 +57,7 @@ def macos():
     m.Downloader
 
 
-
+clear()
 print('1:  Windows')
 print('2:  MacOS')
 print('3:  Linux')
