@@ -4,18 +4,6 @@ import sys
 
 server_jar_link = 'https://launcher.mojang.com/v1/objects/1b557e7b033b583cd9f66746b7a9ab1ec1673ced/server.jar'
 
-def clear():
-    os.system('clear')    
-
-def windows():
-    pass
-def linux():
-    clear()
-
-def macos():
-    pass
-
-
 class Linuxsys:
     def __init__(self, link, systype):
         self.link = link
@@ -50,5 +38,34 @@ class MacOS:
         os.system('java -Xmx1024M -Xms1024M -jar server.jar nogui ')
 
 
-macdown = Linuxsys(server_jar_link, 'Ubuntu')
-macdown.Downloader()
+def clear():
+    os.system('clear')    
+
+def windows():
+    pass
+def linux():
+    clear()
+    l = Linuxsys(server_jar_link, 'Linux/Ubuntu')
+    l.Downloader
+
+def macos():
+    clear()
+    m = MacOS(server_jar_link, 'MacOS')
+    m.Downloader
+
+
+
+print('1:  Windows')
+print('2:  MacOS')
+print('3:  Linux')
+
+
+start = input('Enter your OS: [1, 2, 3]')
+
+
+if start == '1':
+    windows()
+elif start == '2':
+    macos()
+else:
+    linux()
