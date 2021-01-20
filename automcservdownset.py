@@ -50,5 +50,5 @@ class MacOS:
         os.system('java -Xmx1024M -Xms1024M -jar server.jar nogui ')
 
 
-macdown = MacOS(server_jar_link, 'Ubuntu')
+macdown = Linuxsys(server_jar_link, 'Ubuntu')
 macdown.Downloader()
