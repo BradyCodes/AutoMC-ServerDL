@@ -4,7 +4,7 @@
 ### How to run:
 Simply have python3 installed, and type <br> 
 Windows: `python automcservdownset.py` <br>
-MacOS / Linux: `python3 automcservdownset.py` <br>
+MacOS / Linux: `sudo python3 automcservdownset.py` <br>
 
 And follow the on screen instructions, easy as that!
 
